@@ -28,6 +28,14 @@ app.get("/subtract/:number1/:number2", (req, res) => {
 
 })
 
+app.get("/square/:number1/:number2", (req, res) => {
+    const {number1} = req.params;
+    const n1 = Number(number1);
+    const {number2} = req.params;
+    const n2 = Number(number2);
+    res.send(n1**n2);
+})
+
 // node file_name --watch //
 // node --watch file_name //
 app.listen(3000, () => {
